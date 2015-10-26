@@ -121,7 +121,7 @@
         <!--View Controller-->
         <scene sceneID="gAl-Cz-7CW">
             <objects>
-                <viewController id="dE0-Gf-yVG" sceneMemberID="viewController">
+                <viewController id="dE0-Gf-yVG" customClass="DBViewController" customModule="BloomsdayApp_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cKf-p7-2yL"/>
                         <viewControllerLayoutGuide type="bottom" id="pdR-il-wtt"/>
@@ -130,18 +130,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Test" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y9u-Vb-FUI">
-                                <rect key="frame" x="252" y="167" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Latitude" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y9u-Vb-FUI">
+                                <rect key="frame" x="252" y="203" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Longitude" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OLm-Cp-0gj">
+                                <rect key="frame" x="252" y="247" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input some data please..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Yq-PT-GsV">
+                                <rect key="frame" x="204" y="174" width="192" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2K-JZ-Fbv">
+                                <rect key="frame" x="277" y="290" width="46" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="onSubmitLocation:" destination="dE0-Gf-yVG" eventType="touchDown" id="8Iz-WW-rj8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Qo-Mi-i2o">
+                                <rect key="frame" x="277" y="474" width="46" height="30"/>
+                                <state key="normal" title="Scan to STDOUT"/>
+                                <connections>
+                                    <action selector="scanDataFromServer:" destination="dE0-Gf-yVG" eventType="touchDown" id="LDJ-XK-A63"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3Yq-PT-GsV" firstAttribute="top" secondItem="cKf-p7-2yL" secondAttribute="bottom" constant="110" id="6GW-un-FVp"/>
+                            <constraint firstItem="r2K-JZ-Fbv" firstAttribute="centerX" secondItem="2Vl-Dg-JFy" secondAttribute="centerX" id="7aB-9F-z7a"/>
+                            <constraint firstItem="3Yq-PT-GsV" firstAttribute="centerX" secondItem="2Vl-Dg-JFy" secondAttribute="centerX" id="7d1-mt-psL"/>
+                            <constraint firstItem="OLm-Cp-0gj" firstAttribute="centerX" secondItem="2Vl-Dg-JFy" secondAttribute="centerX" id="E7A-3A-nco"/>
+                            <constraint firstItem="Y9u-Vb-FUI" firstAttribute="centerX" secondItem="2Vl-Dg-JFy" secondAttribute="centerX" id="MDf-Gg-pSS"/>
+                            <constraint firstItem="r2K-JZ-Fbv" firstAttribute="top" secondItem="OLm-Cp-0gj" secondAttribute="bottom" constant="13" id="PSG-Nx-naO"/>
+                            <constraint firstItem="8Qo-Mi-i2o" firstAttribute="top" secondItem="r2K-JZ-Fbv" secondAttribute="bottom" constant="154" id="Y5m-TC-wlu"/>
+                            <constraint firstItem="Y9u-Vb-FUI" firstAttribute="top" secondItem="3Yq-PT-GsV" secondAttribute="bottom" constant="8" id="pfl-Yc-XoE"/>
+                            <constraint firstItem="8Qo-Mi-i2o" firstAttribute="centerX" secondItem="2Vl-Dg-JFy" secondAttribute="centerX" id="sdb-4Q-J6c"/>
+                            <constraint firstItem="OLm-Cp-0gj" firstAttribute="top" secondItem="Y9u-Vb-FUI" secondAttribute="bottom" constant="14" id="yf4-ce-Osa"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="latitude" destination="Y9u-Vb-FUI" id="f4a-1P-oRc"/>
+                        <outlet property="longitude" destination="OLm-Cp-0gj" id="Gry-MY-MvP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqR-af-xW6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2041" y="-243"/>
+            <point key="canvasLocation" x="2113" y="-243"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WCU-Ny-1bK">
