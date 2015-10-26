@@ -2,7 +2,6 @@
 //  ModelController.swift
 //  BloomsdayApp-iOS
 //
-//  Created by Jason Schnagl on 10/26/15.
 //  Copyright © 2015 Bloomsday Run. All rights reserved.
 //
 

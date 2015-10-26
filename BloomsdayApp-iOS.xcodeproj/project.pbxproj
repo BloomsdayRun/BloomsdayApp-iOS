@@ -16,6 +16,7 @@
 		AFE0BC561BDE7AA4001ADAEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE0BC541BDE7AA4001ADAEC /* LaunchScreen.storyboard */; };
 		AFE0BC611BDE7AA4001ADAEC /* BloomsdayApp_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0BC601BDE7AA4001ADAEC /* BloomsdayApp_iOSTests.swift */; };
 		AFE0BC6C1BDE7AA4001ADAEC /* BloomsdayApp_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0BC6B1BDE7AA4001ADAEC /* BloomsdayApp_iOSUITests.swift */; };
+		AFE0BC7A1BDE9072001ADAEC /* DBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0BC791BDE9072001ADAEC /* DBViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		AFE0BC671BDE7AA4001ADAEC /* BloomsdayApp-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BloomsdayApp-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE0BC6B1BDE7AA4001ADAEC /* BloomsdayApp_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloomsdayApp_iOSUITests.swift; sourceTree = "<group>"; };
 		AFE0BC6D1BDE7AA4001ADAEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFE0BC791BDE9072001ADAEC /* DBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				AFE0BC471BDE7AA4001ADAEC /* AppDelegate.swift */,
 				AFE0BC491BDE7AA4001ADAEC /* RootViewController.swift */,
+				AFE0BC791BDE9072001ADAEC /* DBViewController.swift */,
 				AFE0BC4B1BDE7AA4001ADAEC /* DataViewController.swift */,
 				AFE0BC4D1BDE7AA4001ADAEC /* ModelController.swift */,
 				AFE0BC4F1BDE7AA4001ADAEC /* Main.storyboard */,
@@ -264,6 +267,7 @@
 				AFE0BC4A1BDE7AA4001ADAEC /* RootViewController.swift in Sources */,
 				AFE0BC4E1BDE7AA4001ADAEC /* ModelController.swift in Sources */,
 				AFE0BC4C1BDE7AA4001ADAEC /* DataViewController.swift in Sources */,
+				AFE0BC7A1BDE9072001ADAEC /* DBViewController.swift in Sources */,
 				AFE0BC481BDE7AA4001ADAEC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

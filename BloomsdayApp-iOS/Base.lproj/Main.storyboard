@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="703-4V-yAM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3lq-7R-dNi">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
         <scene sceneID="clB-vc-fyl">
             <objects>
-                <viewController id="703-4V-yAM" customClass="RootViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="703-4V-yAM" customClass="RootViewController" customModule="BloomsdayApp_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="I7W-xW-C47"/>
                         <viewControllerLayoutGuide type="bottom" id="IfR-02-kHw"/>
@@ -20,12 +20,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q3h-pU-vEd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-101" y="-243"/>
+            <point key="canvasLocation" x="-319" y="-205"/>
         </scene>
-        <!--Data View Controller-->
+        <!--Use Facebook credentials to auth with AWS-->
         <scene sceneID="snT-py-3hH">
             <objects>
-                <viewController storyboardIdentifier="DataViewController" id="S4R-Ja-viH" customClass="DataViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DataViewController" id="S4R-Ja-viH" customClass="DataViewController" customModule="BloomsdayApp_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fXf-Jd-eTc"/>
                         <viewControllerLayoutGuide type="bottom" id="EPS-s9-h4K"/>
@@ -34,15 +34,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="cF2-Le-7mQ">
-                                <rect key="frame" x="20" y="20" width="560" height="16.5"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Welcome to Bloomsday Run" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="cF2-Le-7mQ">
+                                <rect key="frame" x="20" y="20" width="560" height="17"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1b-V9-EN7">
-                                <rect key="frame" x="20" y="44" width="560" height="535.5"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s1b-V9-EN7">
+                                <rect key="frame" x="20" y="44" width="560" height="536"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nOr-ux-vd7">
+                                        <rect key="frame" x="232" y="126" width="97" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Username"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="awK-r9-IPo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="changedTextField:" destination="S4R-Ja-viH" eventType="editingChanged" id="L17-Lr-Frb"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="opr-LU-YZp">
+                                        <rect key="frame" x="257" y="253" width="46" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Submit" label="Submit"/>
+                                        <state key="normal" title="Submit"/>
+                                        <connections>
+                                            <action selector="onSubmit:" destination="S4R-Ja-viH" eventType="touchDown" id="350-8g-SWg"/>
+                                            <segue destination="dE0-Gf-yVG" kind="show" identifier="nextView" id="dCN-5n-tnl"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uxf-ex-3Tu">
+                                        <rect key="frame" x="232" y="189" width="97" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Password"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="JXD-Rs-k5G"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" label="Submit"/>
+                                <constraints>
+                                    <constraint firstItem="uxf-ex-3Tu" firstAttribute="centerX" secondItem="s1b-V9-EN7" secondAttribute="centerX" id="3iE-lA-zxR"/>
+                                    <constraint firstItem="nOr-ux-vd7" firstAttribute="centerX" secondItem="s1b-V9-EN7" secondAttribute="centerX" id="4Yp-Ie-fGN"/>
+                                    <constraint firstItem="nOr-ux-vd7" firstAttribute="top" secondItem="s1b-V9-EN7" secondAttribute="top" constant="126" id="6Ml-4E-jfh"/>
+                                    <constraint firstItem="opr-LU-YZp" firstAttribute="top" secondItem="uxf-ex-3Tu" secondAttribute="bottom" constant="8" id="Lz8-Xg-bTW"/>
+                                    <constraint firstItem="opr-LU-YZp" firstAttribute="centerX" secondItem="s1b-V9-EN7" secondAttribute="centerX" id="R7E-wm-EaD"/>
+                                    <constraint firstAttribute="trailing" secondItem="opr-LU-YZp" secondAttribute="trailing" constant="257" id="UV4-IB-fES"/>
+                                    <constraint firstItem="uxf-ex-3Tu" firstAttribute="top" secondItem="nOr-ux-vd7" secondAttribute="bottom" constant="33" id="mUy-yj-Elq"/>
+                                    <constraint firstItem="opr-LU-YZp" firstAttribute="top" secondItem="uxf-ex-3Tu" secondAttribute="bottom" constant="34" id="wI5-BL-nkw"/>
+                                    <constraint firstItem="opr-LU-YZp" firstAttribute="leading" secondItem="s1b-V9-EN7" secondAttribute="leading" constant="257" id="z4T-YA-cIB"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Lz8-Xg-bTW"/>
+                                        <exclude reference="UV4-IB-fES"/>
+                                        <exclude reference="z4T-YA-cIB"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.97826086960000003" green="0.91848131079999995" blue="0.73914263440000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -56,13 +107,59 @@
                             <constraint firstItem="cF2-Le-7mQ" firstAttribute="top" secondItem="ZwX-cT-FIQ" secondAttribute="top" constant="20" symbolic="YES" id="zem-Jm-uYh"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Use Facebook credentials to auth with AWS" id="4tO-2S-Ygb"/>
                     <connections>
                         <outlet property="dataLabel" destination="cF2-Le-7mQ" id="3EH-BK-JV6"/>
+                        <outlet property="password" destination="uxf-ex-3Tu" id="DwJ-xK-u8k"/>
+                        <outlet property="username" destination="nOr-ux-vd7" id="VHf-j1-Dtq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GmD-Rr-ZGN" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="597" y="-243"/>
+            <point key="canvasLocation" x="1397" y="-243"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gAl-Cz-7CW">
+            <objects>
+                <viewController id="dE0-Gf-yVG" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cKf-p7-2yL"/>
+                        <viewControllerLayoutGuide type="bottom" id="pdR-il-wtt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Vl-Dg-JFy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Test" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y9u-Vb-FUI">
+                                <rect key="frame" x="252" y="167" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqR-af-xW6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2041" y="-243"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WCU-Ny-1bK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3lq-7R-dNi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CwB-yo-fBh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="S4R-Ja-viH" kind="relationship" relationship="rootViewController" id="aKn-E1-eFB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3w3-lO-bp4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="577" y="-243"/>
         </scene>
     </scenes>
 </document>
