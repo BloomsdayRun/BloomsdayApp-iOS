@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AFE0BC481BDE7AA4001ADAEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0BC471BDE7AA4001ADAEC /* AppDelegate.swift */; };
+		AFE0BC4A1BDE7AA4001ADAEC /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0BC491BDE7AA4001ADAEC /* RootViewController.swift */; };
+		AFE0BC4C1BDE7AA4001ADAEC /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0BC4B1BDE7AA4001ADAEC /* DataViewController.swift */; };
+		AFE0BC4E1BDE7AA4001ADAEC /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0BC4D1BDE7AA4001ADAEC /* ModelController.swift */; };
+		AFE0BC511BDE7AA4001ADAEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE0BC4F1BDE7AA4001ADAEC /* Main.storyboard */; };
+		AFE0BC531BDE7AA4001ADAEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE0BC521BDE7AA4001ADAEC /* Assets.xcassets */; };
+		AFE0BC561BDE7AA4001ADAEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE0BC541BDE7AA4001ADAEC /* LaunchScreen.storyboard */; };
+		AFE0BC611BDE7AA4001ADAEC /* BloomsdayApp_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0BC601BDE7AA4001ADAEC /* BloomsdayApp_iOSTests.swift */; };
+		AFE0BC6C1BDE7AA4001ADAEC /* BloomsdayApp_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0BC6B1BDE7AA4001ADAEC /* BloomsdayApp_iOSUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AFE0BC5D1BDE7AA4001ADAEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFE0BC3C1BDE7AA3001ADAEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AFE0BC431BDE7AA4001ADAEC;
+			remoteInfo = "BloomsdayApp-iOS";
+		};
+		AFE0BC681BDE7AA4001ADAEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFE0BC3C1BDE7AA3001ADAEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AFE0BC431BDE7AA4001ADAEC;
+			remoteInfo = "BloomsdayApp-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AFE0BC441BDE7AA4001ADAEC /* BloomsdayApp-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BloomsdayApp-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFE0BC471BDE7AA4001ADAEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AFE0BC491BDE7AA4001ADAEC /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		AFE0BC4B1BDE7AA4001ADAEC /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		AFE0BC4D1BDE7AA4001ADAEC /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
+		AFE0BC501BDE7AA4001ADAEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AFE0BC521BDE7AA4001ADAEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AFE0BC551BDE7AA4001ADAEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AFE0BC571BDE7AA4001ADAEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFE0BC5C1BDE7AA4001ADAEC /* BloomsdayApp-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BloomsdayApp-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFE0BC601BDE7AA4001ADAEC /* BloomsdayApp_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloomsdayApp_iOSTests.swift; sourceTree = "<group>"; };
+		AFE0BC621BDE7AA4001ADAEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFE0BC671BDE7AA4001ADAEC /* BloomsdayApp-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BloomsdayApp-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFE0BC6B1BDE7AA4001ADAEC /* BloomsdayApp_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloomsdayApp_iOSUITests.swift; sourceTree = "<group>"; };
+		AFE0BC6D1BDE7AA4001ADAEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AFE0BC411BDE7AA4001ADAEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFE0BC591BDE7AA4001ADAEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFE0BC641BDE7AA4001ADAEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AFE0BC3B1BDE7AA3001ADAEC = {
+			isa = PBXGroup;
+			children = (
+				AFE0BC461BDE7AA4001ADAEC /* BloomsdayApp-iOS */,
+				AFE0BC5F1BDE7AA4001ADAEC /* BloomsdayApp-iOSTests */,
+				AFE0BC6A1BDE7AA4001ADAEC /* BloomsdayApp-iOSUITests */,
+				AFE0BC451BDE7AA4001ADAEC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AFE0BC451BDE7AA4001ADAEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AFE0BC441BDE7AA4001ADAEC /* BloomsdayApp-iOS.app */,
+				AFE0BC5C1BDE7AA4001ADAEC /* BloomsdayApp-iOSTests.xctest */,
+				AFE0BC671BDE7AA4001ADAEC /* BloomsdayApp-iOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AFE0BC461BDE7AA4001ADAEC /* BloomsdayApp-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				AFE0BC471BDE7AA4001ADAEC /* AppDelegate.swift */,
+				AFE0BC491BDE7AA4001ADAEC /* RootViewController.swift */,
+				AFE0BC4B1BDE7AA4001ADAEC /* DataViewController.swift */,
+				AFE0BC4D1BDE7AA4001ADAEC /* ModelController.swift */,
+				AFE0BC4F1BDE7AA4001ADAEC /* Main.storyboard */,
+				AFE0BC521BDE7AA4001ADAEC /* Assets.xcassets */,
+				AFE0BC541BDE7AA4001ADAEC /* LaunchScreen.storyboard */,
+				AFE0BC571BDE7AA4001ADAEC /* Info.plist */,
+			);
+			path = "BloomsdayApp-iOS";
+			sourceTree = "<group>";
+		};
+		AFE0BC5F1BDE7AA4001ADAEC /* BloomsdayApp-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				AFE0BC601BDE7AA4001ADAEC /* BloomsdayApp_iOSTests.swift */,
+				AFE0BC621BDE7AA4001ADAEC /* Info.plist */,
+			);
+			path = "BloomsdayApp-iOSTests";
+			sourceTree = "<group>";
+		};
+		AFE0BC6A1BDE7AA4001ADAEC /* BloomsdayApp-iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AFE0BC6B1BDE7AA4001ADAEC /* BloomsdayApp_iOSUITests.swift */,
+				AFE0BC6D1BDE7AA4001ADAEC /* Info.plist */,
+			);
+			path = "BloomsdayApp-iOSUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AFE0BC431BDE7AA4001ADAEC /* BloomsdayApp-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFE0BC701BDE7AA4001ADAEC /* Build configuration list for PBXNativeTarget "BloomsdayApp-iOS" */;
+			buildPhases = (
+				AFE0BC401BDE7AA4001ADAEC /* Sources */,
+				AFE0BC411BDE7AA4001ADAEC /* Frameworks */,
+				AFE0BC421BDE7AA4001ADAEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BloomsdayApp-iOS";
+			productName = "BloomsdayApp-iOS";
+			productReference = AFE0BC441BDE7AA4001ADAEC /* BloomsdayApp-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AFE0BC5B1BDE7AA4001ADAEC /* BloomsdayApp-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFE0BC731BDE7AA4001ADAEC /* Build configuration list for PBXNativeTarget "BloomsdayApp-iOSTests" */;
+			buildPhases = (
+				AFE0BC581BDE7AA4001ADAEC /* Sources */,
+				AFE0BC591BDE7AA4001ADAEC /* Frameworks */,
+				AFE0BC5A1BDE7AA4001ADAEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFE0BC5E1BDE7AA4001ADAEC /* PBXTargetDependency */,
+			);
+			name = "BloomsdayApp-iOSTests";
+			productName = "BloomsdayApp-iOSTests";
+			productReference = AFE0BC5C1BDE7AA4001ADAEC /* BloomsdayApp-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AFE0BC661BDE7AA4001ADAEC /* BloomsdayApp-iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFE0BC761BDE7AA4001ADAEC /* Build configuration list for PBXNativeTarget "BloomsdayApp-iOSUITests" */;
+			buildPhases = (
+				AFE0BC631BDE7AA4001ADAEC /* Sources */,
+				AFE0BC641BDE7AA4001ADAEC /* Frameworks */,
+				AFE0BC651BDE7AA4001ADAEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFE0BC691BDE7AA4001ADAEC /* PBXTargetDependency */,
+			);
+			name = "BloomsdayApp-iOSUITests";
+			productName = "BloomsdayApp-iOSUITests";
+			productReference = AFE0BC671BDE7AA4001ADAEC /* BloomsdayApp-iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AFE0BC3C1BDE7AA3001ADAEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Bloomsday Run";
+				TargetAttributes = {
+					AFE0BC431BDE7AA4001ADAEC = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					AFE0BC5B1BDE7AA4001ADAEC = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = AFE0BC431BDE7AA4001ADAEC;
+					};
+					AFE0BC661BDE7AA4001ADAEC = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = AFE0BC431BDE7AA4001ADAEC;
+					};
+				};
+			};
+			buildConfigurationList = AFE0BC3F1BDE7AA3001ADAEC /* Build configuration list for PBXProject "BloomsdayApp-iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AFE0BC3B1BDE7AA3001ADAEC;
+			productRefGroup = AFE0BC451BDE7AA4001ADAEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AFE0BC431BDE7AA4001ADAEC /* BloomsdayApp-iOS */,
+				AFE0BC5B1BDE7AA4001ADAEC /* BloomsdayApp-iOSTests */,
+				AFE0BC661BDE7AA4001ADAEC /* BloomsdayApp-iOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AFE0BC421BDE7AA4001ADAEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFE0BC561BDE7AA4001ADAEC /* LaunchScreen.storyboard in Resources */,
+				AFE0BC531BDE7AA4001ADAEC /* Assets.xcassets in Resources */,
+				AFE0BC511BDE7AA4001ADAEC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFE0BC5A1BDE7AA4001ADAEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFE0BC651BDE7AA4001ADAEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AFE0BC401BDE7AA4001ADAEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFE0BC4A1BDE7AA4001ADAEC /* RootViewController.swift in Sources */,
+				AFE0BC4E1BDE7AA4001ADAEC /* ModelController.swift in Sources */,
+				AFE0BC4C1BDE7AA4001ADAEC /* DataViewController.swift in Sources */,
+				AFE0BC481BDE7AA4001ADAEC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFE0BC581BDE7AA4001ADAEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFE0BC611BDE7AA4001ADAEC /* BloomsdayApp_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFE0BC631BDE7AA4001ADAEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFE0BC6C1BDE7AA4001ADAEC /* BloomsdayApp_iOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AFE0BC5E1BDE7AA4001ADAEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AFE0BC431BDE7AA4001ADAEC /* BloomsdayApp-iOS */;
+			targetProxy = AFE0BC5D1BDE7AA4001ADAEC /* PBXContainerItemProxy */;
+		};
+		AFE0BC691BDE7AA4001ADAEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AFE0BC431BDE7AA4001ADAEC /* BloomsdayApp-iOS */;
+			targetProxy = AFE0BC681BDE7AA4001ADAEC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AFE0BC4F1BDE7AA4001ADAEC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFE0BC501BDE7AA4001ADAEC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AFE0BC541BDE7AA4001ADAEC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFE0BC551BDE7AA4001ADAEC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AFE0BC6E1BDE7AA4001ADAEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AFE0BC6F1BDE7AA4001ADAEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AFE0BC711BDE7AA4001ADAEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "BloomsdayApp-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bloomsdayrun.BloomsdayApp-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AFE0BC721BDE7AA4001ADAEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "BloomsdayApp-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bloomsdayrun.BloomsdayApp-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AFE0BC741BDE7AA4001ADAEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "BloomsdayApp-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bloomsdayrun.BloomsdayApp-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BloomsdayApp-iOS.app/BloomsdayApp-iOS";
+			};
+			name = Debug;
+		};
+		AFE0BC751BDE7AA4001ADAEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "BloomsdayApp-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bloomsdayrun.BloomsdayApp-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BloomsdayApp-iOS.app/BloomsdayApp-iOS";
+			};
+			name = Release;
+		};
+		AFE0BC771BDE7AA4001ADAEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "BloomsdayApp-iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bloomsdayrun.BloomsdayApp-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "BloomsdayApp-iOS";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		AFE0BC781BDE7AA4001ADAEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "BloomsdayApp-iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bloomsdayrun.BloomsdayApp-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "BloomsdayApp-iOS";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AFE0BC3F1BDE7AA3001ADAEC /* Build configuration list for PBXProject "BloomsdayApp-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFE0BC6E1BDE7AA4001ADAEC /* Debug */,
+				AFE0BC6F1BDE7AA4001ADAEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFE0BC701BDE7AA4001ADAEC /* Build configuration list for PBXNativeTarget "BloomsdayApp-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFE0BC711BDE7AA4001ADAEC /* Debug */,
+				AFE0BC721BDE7AA4001ADAEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AFE0BC731BDE7AA4001ADAEC /* Build configuration list for PBXNativeTarget "BloomsdayApp-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFE0BC741BDE7AA4001ADAEC /* Debug */,
+				AFE0BC751BDE7AA4001ADAEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AFE0BC761BDE7AA4001ADAEC /* Build configuration list for PBXNativeTarget "BloomsdayApp-iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFE0BC771BDE7AA4001ADAEC /* Debug */,
+				AFE0BC781BDE7AA4001ADAEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AFE0BC3C1BDE7AA3001ADAEC /* Project object */;
+}
