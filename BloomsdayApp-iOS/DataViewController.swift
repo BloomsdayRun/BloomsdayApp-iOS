@@ -33,6 +33,7 @@ class DataViewController: UIViewController, UITextFieldDelegate {
     }
     
     //when clicking submit, segue must first validate credentials
+    //TODO: Authenticate credentials with Cognito
     override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
         if identifier == "nextView" {
             if (username.text! == "a") {
@@ -48,25 +49,9 @@ class DataViewController: UIViewController, UITextFieldDelegate {
     @IBAction func onSubmit(sender: UIButton) {
         print("button was tapped")
         print("uname = " + username.text!);
-        
-//        if (username.text! == "a") {
-        
-//            performSegueWithIdentifier("nextView", sender: self)
-//        } else {
-            //hey your credentials are wrong!!
-//        }
-        
-//        var next = self.storyboard?.instantiateViewControllerWithIdentifier("DBController") as! DBController
-//        self.presentViewController(next, animated: true, completion: nil)
-//        let dbViewController = self.storyboard!.instantiateViewControllerWithIdentifier("DBController") as! DBViewController
-        
-//        self.navigationController!.pushViewController(dbViewController, animated: true)
+    
     }
     
-//    @IBAction func changedTextField(sender: AnyObject) {
-//        print(sender.text);
-//    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
