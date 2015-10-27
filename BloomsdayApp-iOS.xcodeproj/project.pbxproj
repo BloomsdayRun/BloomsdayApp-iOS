@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		1CF3CE299335E32F34C7AE05 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95748ED780051135DD0A1D9B /* libPods.a */; };
 		AFE0BC481BDE7AA4001ADAEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0BC471BDE7AA4001ADAEC /* AppDelegate.swift */; };
-		AFE0BC4A1BDE7AA4001ADAEC /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0BC491BDE7AA4001ADAEC /* RootViewController.swift */; };
-		AFE0BC4C1BDE7AA4001ADAEC /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0BC4B1BDE7AA4001ADAEC /* DataViewController.swift */; };
-		AFE0BC4E1BDE7AA4001ADAEC /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0BC4D1BDE7AA4001ADAEC /* ModelController.swift */; };
+		AFE0BC4C1BDE7AA4001ADAEC /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0BC4B1BDE7AA4001ADAEC /* StartViewController.swift */; };
 		AFE0BC511BDE7AA4001ADAEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE0BC4F1BDE7AA4001ADAEC /* Main.storyboard */; };
 		AFE0BC531BDE7AA4001ADAEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE0BC521BDE7AA4001ADAEC /* Assets.xcassets */; };
 		AFE0BC561BDE7AA4001ADAEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE0BC541BDE7AA4001ADAEC /* LaunchScreen.storyboard */; };
@@ -47,9 +45,7 @@
 		95748ED780051135DD0A1D9B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE0BC441BDE7AA4001ADAEC /* BloomsdayApp-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BloomsdayApp-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE0BC471BDE7AA4001ADAEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFE0BC491BDE7AA4001ADAEC /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		AFE0BC4B1BDE7AA4001ADAEC /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
-		AFE0BC4D1BDE7AA4001ADAEC /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
+		AFE0BC4B1BDE7AA4001ADAEC /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		AFE0BC501BDE7AA4001ADAEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFE0BC521BDE7AA4001ADAEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFE0BC551BDE7AA4001ADAEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -133,10 +129,8 @@
 			children = (
 				AFE0BC471BDE7AA4001ADAEC /* AppDelegate.swift */,
 				AFE0BC7B1BDEA335001ADAEC /* Constants.swift */,
-				AFE0BC491BDE7AA4001ADAEC /* RootViewController.swift */,
 				AFE0BC791BDE9072001ADAEC /* DBViewController.swift */,
-				AFE0BC4B1BDE7AA4001ADAEC /* DataViewController.swift */,
-				AFE0BC4D1BDE7AA4001ADAEC /* ModelController.swift */,
+				AFE0BC4B1BDE7AA4001ADAEC /* StartViewController.swift */,
 				AFE0BC7E1BDEB846001ADAEC /* DynamoDBManager.swift */,
 				AFE0BC4F1BDE7AA4001ADAEC /* Main.storyboard */,
 				AFE0BC521BDE7AA4001ADAEC /* Assets.xcassets */,
@@ -355,10 +349,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFE0BC4A1BDE7AA4001ADAEC /* RootViewController.swift in Sources */,
 				AFE0BC7F1BDEB846001ADAEC /* DynamoDBManager.swift in Sources */,
-				AFE0BC4E1BDE7AA4001ADAEC /* ModelController.swift in Sources */,
-				AFE0BC4C1BDE7AA4001ADAEC /* DataViewController.swift in Sources */,
+				AFE0BC4C1BDE7AA4001ADAEC /* StartViewController.swift in Sources */,
 				AFE0BC7A1BDE9072001ADAEC /* DBViewController.swift in Sources */,
 				AFE0BC481BDE7AA4001ADAEC /* AppDelegate.swift in Sources */,
 				AFE0BC7C1BDEA335001ADAEC /* Constants.swift in Sources */,

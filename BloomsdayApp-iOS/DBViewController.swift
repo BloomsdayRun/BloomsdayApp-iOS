@@ -19,9 +19,6 @@ class DBViewController: UIViewController {
         super.viewDidLoad()
         print("Loaded DBVC")
         print("User = " + fbUserID!);
-//        print(DataViewController.fbUserID)
-//        var viewControllers: [UIViewController]
-//        print(viewControllers)
     }
     
     override func didReceiveMemoryWarning() {
@@ -106,8 +103,6 @@ class DBViewController: UIViewController {
         })
     }
     
-    
-
     
 }
 

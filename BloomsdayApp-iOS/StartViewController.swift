@@ -1,5 +1,5 @@
 //
-//  DataViewController.swift
+//  StartViewController.swift
 //  BloomsdayApp-iOS
 //
 //  Copyright © 2015 Bloomsday Run. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DataViewController: UIViewController, UITextFieldDelegate {
+class StartViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var dataLabel: UILabel!
     var dataObject: String = ""
@@ -34,9 +34,8 @@ class DataViewController: UIViewController, UITextFieldDelegate {
             }
             
             // FaceBook Auth
+            //Other options for FB permissions: "user_about_me", "user_birthday", "user_hometown", "user_likes", "user_interests", "user_photos", "friends_photos", "friends_hometown", "friends_location", "friends_education_history"
             let perms = ["public_profile", "email", "user_friends"]
-            //        let fromVC = DBViewController.self()
-            print("called application")
             
             FBSDKLoginManager().logInWithReadPermissions(perms, handler: { (result:FBSDKLoginManagerLoginResult!, error:NSError!) -> Void in
                 if error != nil {
@@ -65,12 +64,8 @@ class DataViewController: UIViewController, UITextFieldDelegate {
                         
                         print("Successed")
                         
-                        //TODO: Fix SSL auth bug
-                        // Switching AWS service manager to authenticated
-//                        let loginfo = NSObject(["graph.facebook.com" : fbToken])
-//                        let loginfo = ["graph.facebook.com" : fbToken]
+                        // Set the AWS credentials providerot use Facebook's auth token
                         let logins: NSDictionary = NSDictionary(dictionary: ["graph.facebook.com" : self.fbToken])
-//                        credentialProvider.setLogins(logins);
                         let credentialProvider = AWSCognitoCredentialsProvider(regionType: CognitoRegionType, identityPoolId: CognitoIdentityPoolId)
                         credentialProvider.logins = logins as [NSObject : AnyObject]
                         credentialProvider.refresh()
@@ -104,7 +99,8 @@ class DataViewController: UIViewController, UITextFieldDelegate {
     //TODO: Authenticate credentials with Cognito
     override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
         if identifier == "nextView" {
-            if (username.text! == "a") {
+//            Proceed only if FB authentication succeeds
+            if (fbUserID == "") {
                 return false
             } else {
                 return true
