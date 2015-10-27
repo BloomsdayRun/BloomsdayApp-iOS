@@ -20,6 +20,8 @@
 		AFE0BC7A1BDE9072001ADAEC /* DBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0BC791BDE9072001ADAEC /* DBViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		AFE0BC7C1BDEA335001ADAEC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0BC7B1BDEA335001ADAEC /* Constants.swift */; settings = {ASSET_TAGS = (); }; };
 		AFE0BC7F1BDEB846001ADAEC /* DynamoDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0BC7E1BDEB846001ADAEC /* DynamoDBManager.swift */; settings = {ASSET_TAGS = (); }; };
+		AFE0BC851BDFDA88001ADAEC /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE0BC841BDFDA88001ADAEC /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
+		AFE0BC871BDFDAED001ADAEC /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE0BC861BDFDAED001ADAEC /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		AFE0BC7B1BDEA335001ADAEC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AFE0BC7D1BDEACFA001ADAEC /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		AFE0BC7E1BDEB846001ADAEC /* DynamoDBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamoDBManager.swift; sourceTree = "<group>"; };
+		AFE0BC841BDFDA88001ADAEC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		AFE0BC861BDFDAED001ADAEC /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CF3CE299335E32F34C7AE05 /* libPods.a in Frameworks */,
+				AFE0BC851BDFDA88001ADAEC /* FBSDKCoreKit.framework in Frameworks */,
+				AFE0BC871BDFDAED001ADAEC /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +99,8 @@
 		1CA5F34076C71C5C11E517C7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFE0BC861BDFDAED001ADAEC /* FBSDKLoginKit.framework */,
+				AFE0BC841BDFDA88001ADAEC /* FBSDKCoreKit.framework */,
 				95748ED780051135DD0A1D9B /* libPods.a */,
 			);
 			name = Frameworks;
@@ -494,6 +502,8 @@
 			baseConfigurationReference = 7D529286D18E12D8C4BF2D8E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = "BloomsdayApp-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bloomsdayrun.BloomsdayApp-iOS";
@@ -507,6 +517,8 @@
 			baseConfigurationReference = 82EDF77F1C0C3491708BA009 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = "BloomsdayApp-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bloomsdayrun.BloomsdayApp-iOS";

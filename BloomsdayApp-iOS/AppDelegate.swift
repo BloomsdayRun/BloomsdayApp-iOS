@@ -24,18 +24,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        loginToFacebookWithSuccess(sb, andFailure: fb)
 //       print(fbToken)
 //        loginToFacebookWithSuccess(sb, andFailure: fb )
+        //        var logins: NSDictionary = NSDictionary(dictionary: ["graph.facebook.com" : fbToken])
         
         
-        // Make AWS use the credentials furnished in constants
-        let credentialProvider = AWSCognitoCredentialsProvider(regionType: CognitoRegionType, identityPoolId: CognitoIdentityPoolId)
         
-//        var logins: NSDictionary = NSDictionary(dictionary: ["graph.facebook.com" : fbToken])
+//         Make AWS use the credentials furnished in constants
+//        let credentialProvider = AWSCognitoCredentialsProvider(regionType: CognitoRegionType, identityPoolId: CognitoIdentityPoolId)
         
-        let configuration = AWSServiceConfiguration(
-            region: DefaultServiceRegionType,
-            credentialsProvider: credentialProvider)
+
+//        let configuration = AWSServiceConfiguration(
+//            region: DefaultServiceRegionType,
+//            credentialsProvider: credentialProvider)
         
-        AWSServiceManager.defaultServiceManager().defaultServiceConfiguration = configuration
+//        AWSServiceManager.defaultServiceManager().defaultServiceConfiguration = configuration
         
         return true
     }

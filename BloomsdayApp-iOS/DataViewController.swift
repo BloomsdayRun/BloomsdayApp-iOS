@@ -12,6 +12,8 @@ class DataViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var dataLabel: UILabel!
     var dataObject: String = ""
+    var fbToken = ""
+    var fbUserID = ""
 
     //Params
     @IBOutlet var username: UITextField!
@@ -34,8 +36,6 @@ class DataViewController: UIViewController, UITextFieldDelegate {
             // FaceBook Auth
             let perms = ["public_profile", "email", "user_friends"]
             //        let fromVC = DBViewController.self()
-            var fbToken = ""
-            var fbUserID = ""
             print("called application")
             
             FBSDKLoginManager().logInWithReadPermissions(perms, handler: { (result:FBSDKLoginManagerLoginResult!, error:NSError!) -> Void in
@@ -59,9 +59,9 @@ class DataViewController: UIViewController, UITextFieldDelegate {
                     }
                     if allPermsGranted {
                         // Do work
-                        fbToken = result.token.tokenString
-                        fbUserID = result.token.userID
-                        print(fbToken)
+                        self.fbToken = result.token.tokenString
+                        self.fbUserID = result.token.userID
+                        print(self.fbToken)
                         
                         print("Successed")
                         
@@ -69,7 +69,7 @@ class DataViewController: UIViewController, UITextFieldDelegate {
                         // Switching AWS service manager to authenticated
 //                        let loginfo = NSObject(["graph.facebook.com" : fbToken])
 //                        let loginfo = ["graph.facebook.com" : fbToken]
-                        var logins: NSDictionary = NSDictionary(dictionary: ["graph.facebook.com" : fbToken])
+                        let logins: NSDictionary = NSDictionary(dictionary: ["graph.facebook.com" : self.fbToken])
 //                        credentialProvider.setLogins(logins);
                         let credentialProvider = AWSCognitoCredentialsProvider(regionType: CognitoRegionType, identityPoolId: CognitoIdentityPoolId)
                         credentialProvider.logins = logins as [NSObject : AnyObject]
@@ -87,10 +87,6 @@ class DataViewController: UIViewController, UITextFieldDelegate {
                     }
                 }
             })
-    
-        
-        //DB
-        //DynamoDBManager.describeTable();
     }
     
 //    func textFieldDidChange(textView: UITextField) {
@@ -117,6 +113,12 @@ class DataViewController: UIViewController, UITextFieldDelegate {
             return true
         }
     }
+    
+    //Override prepareForSegue to pass username to DB controller
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        let dest = segue.destinationViewController as! DBViewController
+        dest.fbUserID = self.fbUserID
+}
     
     @IBAction func onSubmit(sender: UIButton) {
         print("button was tapped")

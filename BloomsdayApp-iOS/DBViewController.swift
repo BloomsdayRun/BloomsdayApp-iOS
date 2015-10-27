@@ -10,6 +10,7 @@ import UIKit
 class DBViewController: UIViewController {
     
     var pageViewController: UIPageViewController?
+    var fbUserID: String?
     
     @IBOutlet var latitude: UITextField!
     @IBOutlet var longitude: UITextField!
@@ -17,6 +18,10 @@ class DBViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Loaded DBVC")
+        print("User = " + fbUserID!);
+//        print(DataViewController.fbUserID)
+//        var viewControllers: [UIViewController]
+//        print(viewControllers)
     }
     
     override func didReceiveMemoryWarning() {
@@ -76,7 +81,7 @@ class DBViewController: UIViewController {
         
         // Create data model
         let tableRow = DDBTableRow();
-        tableRow.Username = "INSERT_USER_NAME";
+        tableRow.Username = fbUserID!;
         tableRow.Latitude = latitude;
         tableRow.Longitude = longitude;
         tableRow.Time = timestamp;
