@@ -3,7 +3,8 @@
 //  BloomsdayApp-iOS
 //
 //  Copyright © 2015 Bloomsday Run. All rights reserved.
-//
+// Auth based on login example at: https://medium.com/ios-os-x-development/a-simple-swift-login-implementation-with-facebook-sdk-for-ios-version-4-0-1f313ae814da#.ch6v32s5w
+// Note the above link is for an earlier version of Swift/XCode
 
 import UIKit
 
@@ -22,6 +23,72 @@ class DataViewController: UIViewController, UITextFieldDelegate {
         print("The view loaded")
         username.delegate = self
         
+            if FBSDKAccessToken.currentAccessToken() != nil {
+                print("FB Token not Nil")
+                //For debugging, when we want to ensure that facebook login always happens
+                FBSDKLoginManager().logOut()
+                //else:
+                //return
+            }
+            
+            // FaceBook Auth
+            let perms = ["public_profile", "email", "user_friends"]
+            //        let fromVC = DBViewController.self()
+            var fbToken = ""
+            var fbUserID = ""
+            print("called application")
+            
+            FBSDKLoginManager().logInWithReadPermissions(perms, handler: { (result:FBSDKLoginManagerLoginResult!, error:NSError!) -> Void in
+                if error != nil {
+                    // Process error
+                    FBSDKLoginManager().logOut()
+                    //                failureBlock(error)
+                } else if result.isCancelled {
+                    // Handle cancellations
+                    FBSDKLoginManager().logOut()
+                    //                failureBlock(nil)
+                } else {
+                    // check if user denied a permission
+                    var allPermsGranted = true
+                    let grantedPermissions = result.grantedPermissions.map( {"\($0)"} )
+                    for permission in perms {
+                        if !grantedPermissions.contains(permission) {
+                            allPermsGranted = false
+                            break
+                        }
+                    }
+                    if allPermsGranted {
+                        // Do work
+                        fbToken = result.token.tokenString
+                        fbUserID = result.token.userID
+                        print(fbToken)
+                        
+                        print("Successed")
+                        
+                        //TODO: Fix SSL auth bug
+                        // Switching AWS service manager to authenticated
+//                        let loginfo = NSObject(["graph.facebook.com" : fbToken])
+//                        let loginfo = ["graph.facebook.com" : fbToken]
+                        var logins: NSDictionary = NSDictionary(dictionary: ["graph.facebook.com" : fbToken])
+//                        credentialProvider.setLogins(logins);
+                        let credentialProvider = AWSCognitoCredentialsProvider(regionType: CognitoRegionType, identityPoolId: CognitoIdentityPoolId)
+                        credentialProvider.logins = logins as [NSObject : AnyObject]
+                        credentialProvider.refresh()
+                        let configuration = AWSServiceConfiguration(
+                            region: DefaultServiceRegionType,
+
+                            credentialsProvider: credentialProvider)
+
+                        AWSServiceManager.defaultServiceManager().defaultServiceConfiguration = configuration
+                        
+                    } else {
+                        print("user did not grant all permissions")
+                        print("Failed")
+                    }
+                }
+            })
+    
+        
         //DB
         //DynamoDBManager.describeTable();
     }
@@ -34,6 +101,8 @@ class DataViewController: UIViewController, UITextFieldDelegate {
     @IBAction func changedTextField(sender: UITextField) {
         print(sender.text)
     }
+    
+   
     
     //when clicking submit, segue must first validate credentials
     //TODO: Authenticate credentials with Cognito
@@ -52,7 +121,6 @@ class DataViewController: UIViewController, UITextFieldDelegate {
     @IBAction func onSubmit(sender: UIButton) {
         print("button was tapped")
         print("uname = " + username.text!);
-    
     }
     
     override func didReceiveMemoryWarning() {

@@ -3,4 +3,9 @@
 //
 // Made visible to project in Build Settings > Swift Compiler > Objective-C Bridging Header
 
+//AWS
 #import <AWSDynamoDB/AWSDynamoDB.h>
+
+//Facebook
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
